@@ -1,11 +1,11 @@
-// userController.js
+
 const User = require('../models/userModel');
 
 exports.signup = async (req, res) => {
   const { name, email } = req.body;
 
   try {
-    // Check if the email already exists
+    
     const existingUser = await User.findOne({ email });
 
     if (existingUser) {
